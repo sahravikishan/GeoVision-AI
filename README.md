@@ -1,4 +1,4 @@
-# GeoVision AI
+﻿# GeoVision AI
 
 GeoVision AI is a beginner-friendly satellite image classification project built with PyTorch, EuroSAT, and Streamlit.
 
@@ -41,6 +41,10 @@ Evaluation outputs:
 - `experiments/logs/metrics.csv`
 - `experiments/logs/confusion_matrix.png`
 
+Confusion matrix:
+
+![GeoVision AI confusion matrix](experiments/logs/confusion_matrix.png)
+
 ## Dashboard
 
 Run the app with:
@@ -58,7 +62,13 @@ Dashboard features:
 
 ## Screenshot
 
-![GeoVision AI dashboard](assets/screenshots/dashboard.png)
+Dashboard upload screen:
+
+![GeoVision AI dashboard](assets/screenshots/dashboard.jpeg)
+
+Dashboard prediction result:
+
+![GeoVision AI prediction result](assets/screenshots/dashboard-result.png)
 
 ## Project Structure
 
