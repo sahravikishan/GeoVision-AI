@@ -41,6 +41,16 @@ st.set_page_config(
 st.markdown(
     """
     <style>
+    :root {
+        --gv-text: var(--text-color);
+        --gv-muted: color-mix(in srgb, var(--text-color) 62%, transparent);
+        --gv-border: color-mix(in srgb, var(--text-color) 16%, transparent);
+        --gv-panel: color-mix(in srgb, var(--background-color) 94%, var(--text-color) 6%);
+        --gv-panel-soft: color-mix(in srgb, var(--background-color) 88%, var(--text-color) 12%);
+        --gv-result-bg: color-mix(in srgb, var(--text-color) 92%, var(--background-color) 8%);
+        --gv-result-text: var(--background-color);
+        --gv-result-muted: color-mix(in srgb, var(--background-color) 68%, transparent);
+    }
     .main .block-container {
         padding-top: 1.5rem;
         padding-bottom: 2rem;
@@ -48,35 +58,35 @@ st.markdown(
     }
     .hero {
         padding: 0.5rem 0 1.25rem 0;
-        border-bottom: 1px solid #e5e7eb;
+        border-bottom: 1px solid var(--gv-border);
         margin-bottom: 1.5rem;
     }
     .hero h1 {
         margin: 0;
         font-size: 2.1rem;
-        color: #111827;
+        color: var(--gv-text);
         letter-spacing: -0.03em;
     }
     .hero p {
         margin: 0.35rem 0 0 0;
-        color: #6b7280;
+        color: var(--gv-muted);
         font-size: 0.95rem;
     }
     .panel {
-        background: #ffffff;
-        border: 1px solid #e5e7eb;
+        background: var(--gv-panel);
+        border: 1px solid var(--gv-border);
         border-radius: 14px;
         padding: 1rem;
     }
     .result {
-        background: #111827;
-        color: #ffffff;
+        background: var(--gv-result-bg);
+        color: var(--gv-result-text);
         border-radius: 14px;
         padding: 1rem 1.1rem;
         margin-bottom: 1rem;
     }
     .result .label {
-        color: #9ca3af;
+        color: var(--gv-result-muted);
         font-size: 0.78rem;
         text-transform: uppercase;
         letter-spacing: 0.08em;
@@ -88,20 +98,26 @@ st.markdown(
         margin: 0;
     }
     .empty {
-        border: 1px dashed #d1d5db;
+        border: 1px dashed var(--gv-border);
         border-radius: 14px;
         padding: 2.2rem 1.2rem;
         text-align: center;
-        color: #6b7280;
-        background: #f9fafb;
+        color: var(--gv-muted);
+        background: var(--gv-panel-soft);
     }
     .footer {
         margin-top: 2rem;
         padding-top: 1rem;
-        border-top: 1px solid #e5e7eb;
-        color: #6b7280;
+        border-top: 1px solid var(--gv-border);
+        color: var(--gv-muted);
         font-size: 0.85rem;
         text-align: center;
+    }
+    @media (prefers-color-scheme: dark) {
+        :root {
+            --gv-result-bg: color-mix(in srgb, var(--text-color) 88%, #38bdf8 12%);
+            --gv-result-text: var(--background-color);
+        }
     }
     </style>
     """,
