@@ -58,11 +58,7 @@ Dashboard features:
 
 ## Screenshot
 
-Add a dashboard screenshot here once you have one:
-
-```text
-assets/screenshots/dashboard.png
-```
+![GeoVision AI dashboard](assets/screenshots/dashboard.png)
 
 ## Project Structure
 
